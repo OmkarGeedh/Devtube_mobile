@@ -29,8 +29,6 @@ public class ViewHolder extends RecyclerView.ViewHolder {
     PlayerView playerView;
       private BandwidthMeter bandwidthMeter;
       private TrackSelector trackSelector;
-
-
       private TrackSelection.Factory trackSelectionFactory;
     public ViewHolder(@NonNull View itemView) {
         super(itemView);
