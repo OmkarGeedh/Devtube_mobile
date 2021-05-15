@@ -43,24 +43,24 @@ public class Showvideo extends AppCompatActivity {
                 new FirebaseRecyclerOptions.Builder<Member>()
                 .setQuery(databaseReference, Member.class)
                 .build();
-        FirebaseRecyclerAdapter<Member,ViewHolder> firebaseRecyclerAdapter =
-                new FirebaseRecyclerAdapter<Member, ViewHolder>(options) {
-                    @Override
-                    protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull Member model) {
-
-                        holder.setExoplayer(getApplication(),model.getName(), model.getVideourl());
-
-                    }
-
-                    @NonNull
-                    @Override
-                    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.item,parent, false);
-
-                        return new ViewHolder(view);
-                    }
-                };
-            firebaseRecyclerAdapter.startListening();
+//        FirebaseRecyclerAdapter<Member,ViewHolder> firebaseRecyclerAdapter =
+//                new FirebaseRecyclerAdapter<Member, ViewHolder>(options) {
+//                    @Override
+//                    protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull Member model) {
+//
+//                        holder.setExoplayer(getApplication(),model.getName(), model.getVideourl());
+//
+//                    }
+//
+//                    @NonNull
+//                    @Override
+//                    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+//                        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.item,parent, false);
+//
+//                        return new ViewHolder(view);
+//                    }
+//                };
+//            firebaseRecyclerAdapter.startListening();
         }
 
     }
